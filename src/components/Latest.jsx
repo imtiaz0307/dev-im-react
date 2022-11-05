@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Course from './Course'
 
 const Latest = () => {
@@ -10,7 +11,9 @@ const Latest = () => {
             <Course/>
             <Course/>
         </div>
+        <NavLink to='/courses'>
         <button className="btn f-btn">View All Courses</button>
+      </NavLink>
     </section>
   )
 }

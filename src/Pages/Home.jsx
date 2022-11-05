@@ -4,12 +4,10 @@ import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 import Latest from '../components/Latest';
 import Mailing from '../components/Mailing';
-import Navbar from '../components/Navbar';
 
 const Home = () => {
     return (
         <>
-            <Navbar />
             <Hero />
             <Featured />
             <Latest />

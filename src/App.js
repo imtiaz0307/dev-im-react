@@ -2,7 +2,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import AppState from './context/AppState';
+import Blog from './Pages/Blog';
+import Courses from './Pages/Courses';
 import Home from './Pages/Home';
+import Login from './Pages/Login';
+import Mailing from './Pages/Mailing';
 
 
 
@@ -10,33 +14,13 @@ function App() {
   return (
     <BrowserRouter>
       <AppState>
+        <Navbar/>
         <Routes>
           <Route path='/' element={<Home />} />
-
-          {/* courses */}
-          <Route path='/courses' element={
-            <>
-              <Navbar />
-              <h1>COURSES WILL BE SHOWN HERE</h1>
-            </>
-          } />
-          {/* blog */}
-          <Route path='/blog' element={
-            <>
-              <Navbar />
-              <h1>BLOG WILL BE SHOWN HERE</h1>
-            </>
-          } />
-          {/* mailing */}
-          <Route path='/mailing' element={
-            <>
-              <Navbar />
-              <h1>MAILING FORM WILL BE SHOWN HERE</h1>
-            </>
-          } />
-
-
-
+          <Route path='/courses' element={<Courses />} />
+          <Route path='/blog' element={<Blog />} />
+          <Route path='/mailing' element={<Mailing />} />
+          <Route path='/login' element={<Login />} />
         </Routes>
       </AppState>
     </BrowserRouter>
